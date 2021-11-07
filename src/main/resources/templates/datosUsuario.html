@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agregar Usuario</title>
+        <link rel="stylesheet" type="text/css" href="static/css/main.css" th:href="@{/css/main.css}">
+    </head>
+    <body>
+        <div class="encabezado">
+            <h1>AGREGAR USUARIO</h1>
+        </div>
+        <div class="cCaja">
+            <form th:action="@{/guardarUsuario}" method="post" th:object="${usuario}">
+                <div class="QCaja">
+                <br/>
+                <input type="hidden" name="ID_USUARIO" th:field="*{ID_USUARIO}"/>
+                <label for="NOMBRE">Nombres:</label>
+                <input type="text" name="NOMBRE" th:field="*{NOMBRE}"/>
+                <small th:if="${#fields.hasErrors('NOMBRE')}" th:errors="*{NOMBRE}"></small>
+                <br/>
+                <label for="APELLIDO">Apellidos:</label>
+                <input type="text" name="APELLIDO" th:field="*{APELLIDO}"/>
+                <small th:if="${#fields.hasErrors('APELLIDO')}" th:errors="*{APELLIDO}"></small>
+                <br/>
+                <label for="ID_DPTO">Departamento:</label>
+                <select name="ID_DEPTO" th:field="*{ID_DEPTO}">
+                    <option th:each="departamento:${departamentos}"
+                            th:value="${departamento.ID_DEPTO}"
+                            th:text="${departamento.DESCRIPCION_DEPTO}"
+                            />
+                </select>
+                <br/>
+                <label for="ID_PROFESION">Profesion:</label>
+                <select name="ID_PROFESION" th:field="*{ID_PROFESION}">
+                    <option th:each="profesion:${profesiones}"
+                            th:value="${profesion.ID_PROFESION}"
+                            th:text="${profesion.DESCRIPCION_PROFESION}"
+                            />
+                </select>
+                <br/>
+                <label for="CORREO_ELECTRONICO">Correo:</label>
+                <input type="email" name="CORREO_ELECTRONICO" th:field="*{CORREO_ELECTRONICO}"/>
+                <small th:if="${#fields.hasErrors('CORREO_ELECTRONICO')}" th:errors="*{CORREO_ELECTRONICO}"></small>
+                <br/>
+                <label for="TELEFONO">Teléfono:</label>
+                <input type="number" name="TELEFONO" th:field="*{TELEFONO}"/>
+                <small th:if="${#fields.hasErrors('TELEFONO')}" th:errors="*{TELEFONO}"></small>
+                <br/>
+                <label for="FECHA_NACIMIENTO">Fecha Nacimiento</label>
+                <input type="date" name="FECHA_NACIMIENTO" th:field="*{FECHA_NACIMIENTO}"/>
+                <small th:if="${#fields.hasErrors('FECHA_NACIMIENTO')}" th:errors="*{FECHA_NACIMIENTO}"></small>
+                <br/>
+                <label for="LONGITUD">Longitud</label>
+                <input type="double" name="LONGITUD" th:field="*{LONGITUD}"/>
+                <small th:if="${#fields.hasErrors('LONGITUD')}" th:errors="*{LONGITUD}"></small>
+                <br/>
+                <label for="LATITUD">Latitud</label>
+                <input type="double" name="LATITUD" th:field="*{LATITUD}"/>
+                <small th:if="${#fields.hasErrors('LATITUD')}" th:errors="*{LATITUD}"></small>
+                <br/>
+                <div class="Guardar">
+                <input type="submit" name="guardarUsuario" value="REGISTRAR" class="btn"/>
+                </div>
+            </div>
+            </form>
+                    </div>
+
+ 
+    </body>
+</html>

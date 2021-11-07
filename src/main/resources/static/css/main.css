@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29/10/2021, 22:16:14
+    Author     : anner
+*/
+*{
+    margin: 0;
+    padding: 0;
+    background: #1a0321;
+    font-family: sans-serif;
+}
+.caja{
+
+    margin-top: 20%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: #1a0321;
+    border-style: solid;
+    border-color: white;
+    height: 150px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn{
+   padding: 15px;
+    background: #2079b0;
+    color: black;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    background-image: -ms-linear-gradient(top, #eb94d0, #2079b0);
+}
+
+.Cajita{
+    margin-top: 20%;
+    margin-left: auto;
+    font-family: sans-serif;
+    margin-right: auto;
+    text-align: center;
+    background: #1a0321;
+    border-style: solid;
+    border-color: white;
+    height: 150px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.default{
+    color: white;
+}
+
+.tCaja{
+    margin-top: 8%;
+    color: white;
+    text-align: center;
+}
+
+.cCaja{
+    color: white;
+    text-align: left;
+    border-style: solid;
+    display: flex;
+    width: 500px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+}
+
+.encabezado{
+    color: white;
+    text-align: center;
+}
+
+input, select{
+    color: white;
+    border: white;
+    border-style: solid;
+    border-width: 0.5px;
+    padding: 3px;
+    margin: 8px;
+}
+
+.Guardar{
+    text-align: center;
+}
